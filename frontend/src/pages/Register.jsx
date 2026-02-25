@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate, Link, useLocation } from "react-router-dom";
-import api from "../api";
+import API from "../api";
 
 export default function Register() {
   const nav = useNavigate();
@@ -20,7 +20,7 @@ export default function Register() {
       alert(e.response?.data?.message || "Register failed");
     }
   };
-api.post("/api/auth/login", data)
+
   const handleClose = () => {
     if (location.state?.from) {
       nav(location.state.from);

@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import api from "../api";
+import API from "../api";
 import { addToCart } from "../utils/cart";
 
 export default function Menu() {
@@ -17,15 +17,13 @@ export default function Menu() {
   const location = useLocation();
 
   const isLoggedIn = () => !!localStorage.getItem("token"); // change key if yours is different
-
-  useEffect(() => {
-    setLoading(true);
-    API.get("/products")
-      .then((r) => setProducts(r.data))
-      .catch(() => setErr("Failed to load menu. Check backend is running."))
-      .finally(() => setLoading(false));
-  }, []);
-api.get("/api/products")
+useEffect(() => {
+  setLoading(true);
+  API.get("/products")
+    .then((r) => setProducts(r.data))
+    .catch(() => setErr("Failed to load menu. Check backend is running."))
+    .finally(() => setLoading(false));
+}, []);
   const filtered = useMemo(() => {
     let list = [...products];
     const q = search.trim().toLowerCase();

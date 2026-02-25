@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getCart, removeFromCart, updateQty, totalAmount } from "../utils/cart";
 import { useNavigate } from "react-router-dom";
-import api from "../api";
+
 export default function Cart() {
   const nav = useNavigate();
   const [cart, setCart] = useState([]);

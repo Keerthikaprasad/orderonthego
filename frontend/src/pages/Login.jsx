@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { useNavigate, Link, useLocation } from "react-router-dom";
+import API from "../api";
 
-import api from "../api";
 export default function Login() {
   const nav = useNavigate();
   const location = useLocation();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-api.post("/api/auth/register", data)
+
   const login = async () => {
     if (!email || !password) return alert("Enter email & password");
     try {

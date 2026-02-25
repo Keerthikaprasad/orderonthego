@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { getCart, setCart, totalAmount } from "../utils/cart";
-
+import API from "../api";
 import { useNavigate } from "react-router-dom";
-import api from "../api";
+
 export default function Checkout() {
   const nav = useNavigate();
   const token = localStorage.getItem("token");
