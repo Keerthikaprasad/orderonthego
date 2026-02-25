@@ -9,9 +9,22 @@ const app = express();
 // Middleware
 app.use(express.json());
 
+// ✅ REPLACE your current cors() block with this:
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://orderonthego-virid.vercel.app",
+];
+
 app.use(
   cors({
-    origin: "https://orderonthego-virid.vercel.app",
+    origin: function (origin, callback) {
+      // allow requests with no origin (like Postman)
+      if (!origin) return callback(null, true);
+
+      if (allowedOrigins.includes(origin)) return callback(null, true);
+
+      return callback(new Error("Not allowed by CORS"));
+    },
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
