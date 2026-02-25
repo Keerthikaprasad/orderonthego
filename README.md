@@ -122,13 +122,8 @@ GET /api/orders/my
 
 node seed.js
 
-Default Admin:
 
-Email: admin@sbfoods.com
-Password: admin123
-📸 Screenshots
 
-(Add screenshots here once deployed)
 
 **🧠 Learning Outcomes**
 
