@@ -6,10 +6,20 @@ const connectDB = require("./config/db");
 
 const app = express();
 
-app.use(cors());
+
 app.use(express.json());
 
 connectDB();
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "http://localhost:3000",
+      "https://orderonthego-virid.vercel.app/"
+    ],
+    credentials: true
+  })
+);
 
 app.get("/", (req, res) => res.send("SB Foods API running ✅"));
 
