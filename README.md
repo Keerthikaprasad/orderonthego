@@ -71,7 +71,7 @@ sb-foods/
 └── README.md
 **⚙️ Installation & Setup**
 1️⃣ Clone Repository
-git clone https://github.com/your-username/Orderonthego.git
+git clone https://github.com/Keerthikaprasad/orderonthego
 cd Orderonthego
 2️⃣ Backend Setup
 cd backend
