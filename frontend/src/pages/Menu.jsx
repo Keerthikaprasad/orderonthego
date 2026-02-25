@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import API from "../api";
+import api from "../api";
 import { addToCart } from "../utils/cart";
 
 export default function Menu() {

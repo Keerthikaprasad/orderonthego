@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link, useLocation } from "react-router-dom";
-import API from "../api";
 
+import api from "../api";
 export default function Login() {
   const nav = useNavigate();
   const location = useLocation();

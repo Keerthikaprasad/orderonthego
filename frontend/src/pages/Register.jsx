@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate, Link, useLocation } from "react-router-dom";
-import API from "../api";
+import api from "../api";
 
 export default function Register() {
   const nav = useNavigate();
