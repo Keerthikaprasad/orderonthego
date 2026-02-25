@@ -7,6 +7,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Admin from "./pages/Admin";
 import { getCart } from "./utils/cart";
+axios.get("https://orderonthego-2.onrender.com/api/products")
 
 export default function App() {
   const nav = useNavigate();
