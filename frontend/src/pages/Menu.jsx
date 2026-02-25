@@ -25,7 +25,7 @@ export default function Menu() {
       .catch(() => setErr("Failed to load menu. Check backend is running."))
       .finally(() => setLoading(false));
   }, []);
-
+api.get("/api/products")
   const filtered = useMemo(() => {
     let list = [...products];
     const q = search.trim().toLowerCase();

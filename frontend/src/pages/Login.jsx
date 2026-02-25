@@ -8,7 +8,7 @@ export default function Login() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+api.post("/api/auth/register", data)
   const login = async () => {
     if (!email || !password) return alert("Enter email & password");
     try {

@@ -20,7 +20,7 @@ export default function Register() {
       alert(e.response?.data?.message || "Register failed");
     }
   };
-
+api.post("/api/auth/login", data)
   const handleClose = () => {
     if (location.state?.from) {
       nav(location.state.from);
